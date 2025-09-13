@@ -119,6 +119,6 @@ The project was completed as part of the **STC 6-Week Data Analyst Mentorship Pr
 ---
 
 ## 📬 Contact
-👤 [Your Full Name]  
-📧 [Your Email]  
-🔗 [Your LinkedIn]  
+👤 [Raymond Kadzashie]  
+📧 [rykadzashie@outlook.com]  
+💼 [LinkedIn](https://www.linkedin.com/in/raymond-kadzashie/) 
