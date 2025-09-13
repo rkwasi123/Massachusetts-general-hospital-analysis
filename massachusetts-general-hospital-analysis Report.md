@@ -1,4 +1,5 @@
-# 🏥 Healthcare Analytics – STC 6-Week Data Analyst Project  
+# 🏥 Healthcare Analytics – massachusetts-general-hospital-analysis
+ 
 
 ## 📑 Table of Contents  
 - [📌 Project Overview](#-project-overview)  
