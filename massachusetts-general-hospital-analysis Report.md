@@ -46,7 +46,7 @@ The project was completed as part of the **STC 6-Week Data Analyst Mentorship Pr
 ## 📈 Dashboards & Insights
 
 ### 🔹 1. Overview Dashboard  
-![Overview Dashboard](Overview_page.png)  
+![Overview Dashboard](Overview page.png)  
 
 **Key Insights**  
 - 27,891 total encounters, 974 unique patients  
@@ -57,7 +57,7 @@ The project was completed as part of the **STC 6-Week Data Analyst Mentorship Pr
 ---
 
 ### 🔹 2. Cost & Coverage Insights Dashboard  
-![Cost Dashboard](Cost Insight dashboard.png)  
+![Cost Dashboard](Cost Insight.png)  
 
 **Key Insights**  
 - Avg base cost per procedure = **$2,092**  
