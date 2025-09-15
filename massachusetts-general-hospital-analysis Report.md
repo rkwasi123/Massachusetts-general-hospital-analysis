@@ -1,5 +1,4 @@
-# STC Data Analyst Project – Week 5 Portfolio  
-**Project Title:** Massachusetts General Hospital – Healthcare Analytics  
+# Massachusetts General Hospital – Healthcare Analytics  
 
 ---
 
