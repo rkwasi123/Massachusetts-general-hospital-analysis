@@ -1,52 +1,101 @@
-# 🏥 Healthcare Analytics – massachusetts-general-hospital-analysis
- 
+# STC Data Analyst Project – Week 5 Portfolio  
+**Project Title:** Massachusetts General Hospital – Healthcare Analytics  
+
+---
 
 ## 📑 Table of Contents  
-- [📌 Project Overview](#-project-overview)  
-- [📂 Dataset](#-dataset)  
-- [🛠 Tools & Technologies](#-tools--technologies)  
-- [📈 Dashboards & Insights](#-dashboards--insights)  
-  - [🔹 1. Overview Dashboard](#-1-overview-dashboard)  
-  - [🔹 2. Cost & Coverage Insights Dashboard](#-2-cost--coverage-insights-dashboard)  
-  - [🔹 3. Patient Behavior Dashboard](#-3-patient-behavior-dashboard)  
-- [📊 Project Workflow](#-project-workflow)  
-- [📌 Key Takeaways](#-key-takeaways)  
-- [🚀 How to Run This Project](#-how-to-run-this-project)  
-- [📬 Contact](#-contact)  
+1. [Introduction](#1-introduction)  
+2. [Project Description](#2-project-description)  
+3. [Project Aim](#3-project-aim)  
+4. [About the Dataset](#4-about-the-dataset)  
+5. [Tools Used](#5-tools-used)  
+6. [Importing the Dataset](#6-importing-the-dataset)  
+7. [Data Cleaning & Transformation](#7-data-cleaning--transformation)  
+8. [Data Modeling](#8-data-modeling)  
+9. [Data Analysis](#9-data-analysis)  
+10. [Dashboards & Insights](#-dashboards--insights)  
+   - [1. Overview Dashboard](#-1-overview-dashboard)  
+   - [2. Cost & Coverage Insights Dashboard](#-2-cost--coverage-insights-dashboard)  
+   - [3. Patient Behavior Dashboard](#-3-patient-behavior-dashboard)  
+11. [Key Recommendations](#11-key-recommendations)  
+12. [Conclusion](#12-conclusion)  
+13. [Contact Information](#13-contact-information) 
 
 ---
 
-## 📌 Project Overview
-This project analyzes synthetic hospital patient records (Massachusetts General Hospital, 2011–2022) to uncover insights into:  
-- Patient encounters and hospital utilization  
-- Cost and insurance coverage trends  
-- Procedure frequency and cost drivers  
-- Patient behavior and readmissions  
-
-The project was completed as part of the **STC 6-Week Data Analyst Mentorship Program**, with a focus on SQL, Power BI, and Data Storytelling.  
+## 1. Introduction  
+This project analyzes synthetic patient and hospital encounter records from Massachusetts General Hospital (2011–2022). The goal is to provide actionable insights to improve hospital operations, reduce costs, and enhance patient outcomes.  
 
 ---
 
-## 📂 Dataset
-- **Patients Table** → demographics, marital status, race, gender  
-- **Encounters Table** → admissions, discharge, class of encounter, costs, readmissions  
-- **Payers Table** → insurance and coverage  
-- **Procedures Table** → medical procedures performed  
-- **Dictionary Table** → metadata reference  
+## 2. Project Description  
+The project covers:  
+- Data cleaning and transformation in SQL  
+- Analytical queries to answer defined business questions  
+- Building dashboards in Power BI to communicate insights  
+- Recommendations for stakeholders  
 
 ---
 
-## 🛠 Tools & Technologies
-- **SQL (MySQL)** → cleaning & transformation  
-- **Power BI** → dashboarding & storytelling  
-- **Excel** → exploration and quick validation  
+## 3. Project Aim  
+To identify encounter trends, cost drivers, and patient behaviors that impact hospital resource utilization and care quality.  
 
 ---
 
-## 📈 Dashboards & Insights
+## 4. About the Dataset  
+- **Source:** Synthetic dataset (Massachusetts General Hospital)  
+- **Records:** ~27,891 encounters, 974 patients  
+- **Key Tables:** Patients, Encounters, Payers, Procedures, Dictionary  
+- **Fields:** Demographics, encounter class, costs, insurance coverage, procedure codes  
+
+---
+
+## 5. Tools Used  
+- Microsoft Excel (exploration)  
+- SQL (MySQL – data cleaning & analysis)  
+- Power BI (dashboards & storytelling)  
+
+---
+
+## 6. Importing the Dataset  
+- CSVs loaded into MySQL staging tables  
+- Cleaned and standardized in SQL  
+- Imported curated tables into Power BI for dashboarding  
+
+---
+
+## 7. Data Cleaning & Transformation  
+- Removed duplicates and empty rows  
+- Standardized gender, marital status, and encounter class  
+- Converted text-based dates into proper datetime formats  
+- Fixed inconsistent procedure codes  
+- Removed unnecessary staging fields  
+
+---
+
+## 8. Data Modeling  
+- Built a star schema in Power BI:  
+  - **Fact table:** Encounters  
+  - **Dimensions:** Patients, Payers, Procedures, DimDate, DimEncounterClass  
+- Created DAX measures for KPIs (Encounters YoY%, MoM%, Avg Claim Cost, etc.)  
+
+---
+
+## 9. Data Analysis  
+Key metrics analyzed:  
+- Encounters by year & class  
+- Encounter duration (>24hrs vs ≤24hrs)  
+- Zero payer coverage cases  
+- Procedure frequency and costs  
+- Readmissions within 30 days  
+- Unique patients per quarter  
+
+---
+
+## 📈 Dashboards & Insights  
 
 ### 🔹 1. Overview Dashboard  
-![Overview Dashboard](Overview page.png)  
+[![Overview Dashboard](images/Overview%20page.png)](images/Overview%20page.png) 
 
 **Key Insights**  
 - 27,891 total encounters, 974 unique patients  
@@ -57,7 +106,7 @@ The project was completed as part of the **STC 6-Week Data Analyst Mentorship Pr
 ---
 
 ### 🔹 2. Cost & Coverage Insights Dashboard  
-![Cost Dashboard](Cost Insight.png)  
+[![Cost Dashboard](images/Cost%20Insight.png)](images/Cost%20Insight.png)
 
 **Key Insights**  
 - Avg base cost per procedure = **$2,092**  
@@ -69,54 +118,34 @@ The project was completed as part of the **STC 6-Week Data Analyst Mentorship Pr
 ---
 
 ### 🔹 3. Patient Behavior Dashboard  
-![Patient Behavior](patients_behavior.png)  
+[![Patient Behavior](images/patients_behavior.png)](images/patients_behavior.png) 
 
 **Key Insights**  
 - Repeat encounter rate: **28.64%**  
 - Readmissions within 30 days: **13,138**  
-- Top readmitted patient (Collier Collier) accounted for **3.63%** of all encounters  
+- Top readmitted patient (Kimberly Collier) accounted for **3.63%** of all encounters  
 - Patient volumes peaked in **2014 Q1**; variability observed across years  
 - Subset of patients drive disproportionate encounters → opportunity for **targeted care management**  
 
 ---
 
-## 📊 Project Workflow
-1. **Week 1 – Understanding the Problem**  
-   - Defined business challenge & stakeholders  
-   - Drafted business questions  
-
-2. **Week 2 – Data Cleaning**  
-   - Imported raw CSVs → staging tables in MySQL  
-   - Cleaned patient names, standardized gender/marital status  
-   - Converted text-based dates → proper datetime  
-   - Removed duplicates, blanks, unnecessary fields  
-
-3. **Week 3 – Data Analysis**  
-   - SQL queries answered business questions (encounters per year, class %, >24hr encounters, procedures, readmissions)  
-
-4. **Week 4 – Visualization**  
-   - Built Power BI dashboards  
-   - Designed KPIs with conditional formatting  
-   - Storytelling structure: Overview → Cost → Patient Behavior  
+## 11. Key Recommendations  
+- Reduce uninsured encounters by introducing financial assistance programs.  
+- Target care management for frequent readmission patients.  
+- Optimize resources for costly inpatient encounters.  
+- Prepare staff/resources for seasonal peaks in patient volume.  
 
 ---
 
-## 📌 Key Takeaways
-- **Operational:** Ambulatory & Outpatient dominate hospital visits  
-- **Financial:** Inpatient = most costly; uninsured patients face highest costs  
-- **Clinical:** Seasonal patient trends, 6%+ readmissions highlight care gaps  
-- **Strategic:** Patient concentration suggests care management programs could reduce repeat admissions  
+## 12. Conclusion  
+The dashboards highlight operational and financial challenges. Addressing cost inefficiencies and focusing on high-risk patients can improve hospital performance and patient care outcomes.  
 
 ---
 
-## 🚀 How to Run This Project
-1. Clone the repository  
-2. Load `patients.csv`, `encounters.csv`, `payers.csv`, `procedures.csv` into MySQL  
-3. Run SQL scripts (`/sql` folder) to clean & transform  
-4. Connect Power BI to curated MySQL schema  
-5. Use DAX measures in `/measures` to replicate dashboards  
+## 13. Contact Information  
+- **LinkedIn:** [https://www.linkedin.com/in/raymond-kadzashie/]  
+- **Email:** [rykadzashie@outlook.com]  
 
----
 
 ## 📬 Contact
 👤 [Raymond Kadzashie]  
