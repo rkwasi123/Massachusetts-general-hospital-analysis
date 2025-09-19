@@ -139,14 +139,9 @@ Key metrics analyzed:
 ## 12. Conclusion  
 The dashboards highlight operational and financial challenges. Addressing cost inefficiencies and focusing on high-risk patients can improve hospital performance and patient care outcomes.  
 
----
+---  
 
-## 13. Contact Information  
-- **LinkedIn:** [https://www.linkedin.com/in/raymond-kadzashie/]  
-- **Email:** [rykadzashie@outlook.com]  
-
-
-## 📬 Contact
+## 13. 📬 Contact Information
 👤 [Raymond Kadzashie]  
 📧 [rykadzashie@outlook.com]  
 💼 [LinkedIn](https://www.linkedin.com/in/raymond-kadzashie/) 
